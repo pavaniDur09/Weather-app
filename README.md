@@ -1,6 +1,6 @@
-# Skyward — Weather Application
+# Skysee — Weather Application
 
-A weather dashboard built for the Week 4 project (Frontend Integration & Final Project). It fetches live conditions and a 5-day forecast from **OpenWeatherMap**, with a few extras on top of the base brief.
+A weather dashboard for it fetches live conditions and a 5-day forecast from OpenWeatherMap, with a few extras on top of the base brief.
 
 ## Live features
 
@@ -28,7 +28,7 @@ A weather dashboard built for the Week 4 project (Frontend Integration & Final P
 2. Once logged in, go to **My API keys** (in your account menu).
 3. Copy the default key that's generated (or click "Generate" for a new one).
 
-> ⚠️ **New keys take 10 minutes–2 hours to activate.** If you get a `401 Unauthorized` error right after signing up, that's normal — just wait a bit and try again.
+> New keys take 10 minutes–2 hours to activate. If you get a `401 Unauthorized` error right after signing up, that's normal — just wait a bit and try again.
 
 This project uses two free-tier OpenWeatherMap APIs:
 - **Current Weather Data** (`/data/2.5/weather`)
@@ -67,7 +67,7 @@ week4-weather-app/
 │   ├── weather-icons.css  # condition → glyph mapping
 │   └── responsive.css     # breakpoints
 ├── js/
-│   ├── env.js              # ⚠️ your real API key (gitignored, create this)
+│   ├── env.js              # your real API key (gitignored, create this)
 │   ├── env.example.js      # template for env.js
 │   ├── config.js           # endpoints, cache duration, weather-code mapping
 │   ├── storage.js          # localStorage wrapper (cache/favorites/prefs)
@@ -86,7 +86,7 @@ week4-weather-app/
 
 No build step. Either:
 
-1. Open `index.html` directly in a browser, **or**
+1. Open `index.html` directly in a browser, or
 2. Serve it locally so geolocation/clipboard permissions behave consistently:
    ```bash
    npx serve .
@@ -100,7 +100,7 @@ No build step. Either:
 2. Repo **Settings → Pages → Source**: select the `main` branch, root folder.
 3. Your app will be live at `https://<username>.github.io/<repo-name>/`.
 
-⚠️ **Important for public repos:** since this is a client-side-only app with no backend, your API key will be visible in the browser's network requests to anyone who inspects the live site — this is a known limitation of any purely-frontend API integration, not specific to this project. For a school project this is normal and expected. If you ever build something production-grade, you'd proxy the request through a small backend to hide the key instead.
+**Important for public repos:** since this is a client-side-only app with no backend, your API key will be visible in the browser's network requests to anyone who inspects the live site — this is a known limitation of any purely-frontend API integration, not specific to this project. For a school project this is normal and expected. If you ever build something production-grade, you'd proxy the request through a small backend to hide the key instead.
 
 ## Notes on architecture
 
