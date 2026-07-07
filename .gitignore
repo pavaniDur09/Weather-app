@@ -1,0 +1,6 @@
+.env
+js/env.js
+.DS_Store
+node_modules/
+.vscode/
+*.log

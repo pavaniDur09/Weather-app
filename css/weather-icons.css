@@ -1,0 +1,37 @@
+/* -----------------------------------------------------------------------
+   Lightweight icon set: no image assets needed, each condition maps to
+   a glyph via a CSS ::before. Keeps the repo dependency-free while still
+   satisfying "weather condition icons (CSS or images)".
+   ----------------------------------------------------------------------- */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.icon-clear-day::before      { content: "☀️"; }
+.icon-few-clouds::before     { content: "🌤️"; }
+.icon-partly-cloudy::before  { content: "⛅"; }
+.icon-cloudy::before         { content: "☁️"; }
+.icon-fog::before            { content: "🌫️"; }
+.icon-drizzle::before        { content: "🌦️"; }
+.icon-rain::before           { content: "🌧️"; }
+.icon-rain-heavy::before     { content: "🌧️"; }
+.icon-sleet::before          { content: "🌨️"; }
+.icon-snow::before           { content: "❄️"; }
+.icon-snow-heavy::before     { content: "❄️"; }
+.icon-showers::before        { content: "🌦️"; }
+.icon-showers-heavy::before  { content: "🌧️"; }
+.icon-storm::before          { content: "⛈️"; }
+.icon-storm-hail::before     { content: "⛈️"; }
+
+html[data-effective-theme="night"] [class^="icon-"],
+html[data-effective-theme="night"] [class*=" icon-"] {
+  filter: brightness(1.08) saturate(0.95);
+}

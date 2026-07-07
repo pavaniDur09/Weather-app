@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkySee — Weather APP</title>
+  <meta name="description" content="A weather dashboard with live conditions, 5-day forecast, favorites, and unit conversion." />
+
+  <link rel="icon" type="image/svg+xml" href="week4-weather-app/assets/icons/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/weather-icons.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark" type="icon"  aria-hidden="true"></span>
+        <span class="brand-name">SkySee</span>
+      </div>
+      <div class="header-controls">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle theme">🌓</button>
+        <button id="unitToggle" class="icon-btn unit-btn" type="button" aria-label="Toggle units">°C</button>
+      </div>
+    </header>
+
+    <main class="app-main">
+
+      <section class="search-wrap">
+        <label for="searchInput" class="visually-hidden">Search for a city</label>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search a city…"
+          autocomplete="off"
+          role="combobox"
+          aria-expanded="false"
+          aria-controls="suggestions"
+        />
+        <button id="locationBtn" class="icon-btn location-btn" type="button" title="Use my location" aria-label="Use my location">📍</button>
+        <ul id="suggestions" class="suggestions" role="listbox" hidden></ul>
+      </section>
+
+      <section id="favorites" class="favorites" aria-label="Favorite cities"></section>
+
+      <section id="currentWeather" class="current-weather" aria-live="polite"></section>
+
+      <section class="forecast-section">
+        <div class="section-heading">
+          <h3>Next 5 days</h3>
+          <button id="shareBtn" class="text-btn" type="button">Share</button>
+        </div>
+        <div id="forecast"></div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p>Data from <a href="https://home.openweathermap.org/" target="_blank" rel="noopener">openweathermap</a></p>
+    </footer>
+
+  </div>
+
+  <script src="js/env.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/weatherService.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

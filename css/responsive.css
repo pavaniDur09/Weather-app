@@ -1,0 +1,35 @@
+/* -----------------------------------------------------------------------
+   Responsive adjustments. Mobile-first base already lives in style.css
+   (max-width: 480px shell), so these breakpoints scale it up and patch
+   the few places that need different treatment on very small phones.
+   ----------------------------------------------------------------------- */
+
+/* Small phones */
+@media (max-width: 360px) {
+  .app-shell { padding: 20px 14px 44px; }
+
+  .temperature { font-size: 2.1rem; }
+  .gauge { width: 78px; height: 78px; }
+
+  .weather-details { grid-template-columns: repeat(2, 1fr); row-gap: 12px; }
+
+  .forecast-container { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; }
+  .forecast-day { padding: 8px 3px; }
+  .day-name, .temps { font-size: 0.7rem; }
+}
+
+/* Tablets and up */
+@media (min-width: 720px) {
+  .app-shell { max-width: 640px; padding-top: 44px; }
+
+  .weather-card { padding: 30px 30px 26px; }
+  .gauge { width: 116px; height: 116px; }
+  .temperature { font-size: 3.1rem; }
+
+  .forecast-day { padding: 16px 8px; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .app-shell { max-width: 760px; }
+}
